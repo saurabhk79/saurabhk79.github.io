@@ -6,7 +6,7 @@
   "homepage": "https://saurabhk79.github.io",
   "scripts": {
     "dev": "vite",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
