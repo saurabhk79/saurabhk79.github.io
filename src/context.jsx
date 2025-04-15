@@ -9,7 +9,8 @@ const UserContext = ({ children }) => {
       name: "About",
       description: "Something here!",
       data: `
-        \n [${Date()}] > ABOUT SAURABH --all
+        \n On [${Date()}] 
+        \n ---> ABOUT SAURABH --all
         \n
         Hey! I'm Saurabh Kumar.
         \n
@@ -19,7 +20,6 @@ const UserContext = ({ children }) => {
         \n
         Most of my projects revolve around solving real-world problems using simple and maintainable code. 
         I prefer writing logic-heavy backend systems, working with REST and GraphQL APIs, and handling database design. 
-        I’ve also worked with AWS and have some experience setting up CI/CD pipelines and server-side monitoring.
         \n
         I’ve built things like chat applications, URL shorteners, admin panels, custom authentication flows, and internal tools. 
         I'm always looking to improve how things work behind the scenes — whether that’s speeding up a query or making an endpoint more efficient.
@@ -33,31 +33,40 @@ const UserContext = ({ children }) => {
     {
       name: "Projects",
       description: "Something here!",
-      data: `> Projects\n
+      data: `
+        \n On [${Date()}] 
+        \n ---> ls projects --all
+        \n > Projects\n
+        I have worked on solving the real-world problems. Additionally, I like to contribute to open-source projects.\n
         > Chat Application 💬\n
         Built a real-time chat app using Socket.io, Express, and React.\n
-        Frontend in React, backend in Node.js with WebSocket integration.\n
-        Link: https://github.com/saurabhk-chatapp\n\n
+        Frontend in JS, backend in Node.js with WebSocket integration.\n
+        Public Repo: https://github.com/saurabhk79/Chat-app
         > URL Shortener 🔗\n
         A minimal URL shortening service like Bit.ly.\n
-        Built using Node.js, Express, MongoDB, and Redis for caching.\n
-        Supports custom aliases, redirection analytics, and expiry time.\n
-        Link: https://github.com/saurabhk-urlshortener`,
+        Built using Node.js, Express, MongoDB.\n
+        Link:
+        Public Repo:https://github.com/saurabhk79/URLshortener
+        > Task Manager
+        Built using Node.js, Express, MongoDB and React.js for the frontend. \n
+        User Authentication, JWT for the user tasks.\n
+        User-friendly UI, sleek design and animation.\n
+        Link: 
+        Public Repo: https://github.com/saurabhk79/task-management-24
+        `,
     },
     {
       name: "Contact",
       description: "Something here!",
-      data: `> Contact Me 📬\n
+      data: `
+        \n On [${Date()}] 
+        \n ---> showinfo contact --all
+        \n > Contact Me 📬\n
+        Want to connect? You can ping me, on these, and I will get back to you as soon as possible 😉
         > LinkedIn 👔\n
-        https://linkedin.com/in/saurabhk-dev\n\n
-        > X (Twitter) 🐦\n
-        https://x.com/saurabhk_dev\n\n
-        > Fiverr 💼\n
-        https://www.fiverr.com/saurabhk_dev\n\n
+        https://linkedin.com/in/saurabhk79\n\n
         > Prefer Emails? 📩\n
-        Just shoot a message at:\n
-        📧 saurabhk.dev@gmail.com\n
-        I'll get back to you faster than a Linux boot 😉`,
+        Or just drop a mail at: imsauby@gmail.com\n`,
     },
   ];
 
