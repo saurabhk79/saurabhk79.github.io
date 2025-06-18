@@ -8,15 +8,22 @@ const Details = () => {
   const scrollRef = useRef(null);
 
   const toggleCurrentConsole = (idx) => {
-    console.log('have been clicked!')
+    console.log("have been clicked!");
     setCurrentConsole(idx);
     updateToggle("showConsole", true);
+    updateToggle("skipAnimation", false)
     // setTimeout(() => {
     //   scrollRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     // }, 100);
   };
 
-  console.log('---------->', toggles.showConsole);
+  const formatContent = (content) => {
+    return content
+      .trim()
+      .split("\n")
+      .map((line, index) => <span key={index}>{line}<br /></span>);
+  };
+
 
   return (
     <div
@@ -33,10 +40,23 @@ const Details = () => {
       </ul>
       {toggles.showConsole && (
         <div className="console">
-          <Console
-            type={userData[currentConsole].name}
-            data={userData[currentConsole].data}
-          />
+          <button
+            style={{ whiteSpace: "pre-line", display: "block" }}
+            className="skip-button"
+            onClick={() => updateToggle("skipAnimation", true)}
+          >
+            skip
+          </button>
+          {toggles.skipAnimation ? (
+            <div className="console-content">
+              {formatContent(userData[currentConsole].data)}
+            </div>
+          ) : (
+            <Console
+              type={userData[currentConsole].name}
+              data={userData[currentConsole].data?.trim()}
+            />
+          )}
         </div>
       )}
     </div>

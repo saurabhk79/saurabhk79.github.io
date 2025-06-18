@@ -1,0 +1,11 @@
+.skip-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    color: #00ff88;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+}

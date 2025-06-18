@@ -12,7 +12,7 @@ const UserContext = ({ children }) => {
         \n On [${Date()}] 
         \n ---> ABOUT SAURABH --all
         \n
-        Hey! I'm Saurabh Kumar.
+        Hey! I'm Saurabh.
         \n
         I'm a backend-focused developer who enjoys building web applications and APIs. 
         My main stack includes Python (Django, Flask, FastAPI), JavaScript/TypeScript, and Node.js. 
@@ -36,23 +36,47 @@ const UserContext = ({ children }) => {
       data: `
         \n On [${Date()}] 
         \n ---> ls projects --all
-        \n > Projects\n
-        I have worked on solving the real-world problems. Additionally, I like to contribute to open-source projects.\n
-        > Chat Application 💬\n
+        \n >---> Projects\n
+        I have worked on solving the real-world problems, with multiple programming languages. Additionally, I like to contribute to open-source projects.\n
+        > Chat Application \n
         Built a real-time chat app using Socket.io, Express, and React.\n
         Frontend in JS, backend in Node.js with WebSocket integration.\n
-        Public Repo: https://github.com/saurabhk79/Chat-app
-        > URL Shortener 🔗\n
+        Public Repo: https://github.com/saurabhk79/Chat-app\n\n\n
+        > URL Shortener \n
         A minimal URL shortening service like Bit.ly.\n
         Built using Node.js, Express, MongoDB.\n
         Link:
-        Public Repo:https://github.com/saurabhk79/URLshortener
+        Public Repo:https://github.com/saurabhk79/URLshortener\n\n\n
         > Task Manager
         Built using Node.js, Express, MongoDB and React.js for the frontend. \n
         User Authentication, JWT for the user tasks.\n
         User-friendly UI, sleek design and animation.\n
         Link: 
-        Public Repo: https://github.com/saurabhk79/task-management-24
+        Public Repo: https://github.com/saurabhk79/task-management-24\n\n\n
+        > Typing Test App\n
+        Built with Vue.js for a responsive and smooth typing experience.\n
+        Tracks typing speed, accuracy, and highlights real-time progress.\n
+        Clean UI focused on minimal distractions and ease of use.\n
+        Link:\n
+        Public Repo: https://github.com/saurabhk79/typing-test\n\n\n
+        > Snake Game\n
+        Developed using Next.js with a focus on performance and interactivity.\n
+        Classic snake gameplay with modern web animations.\n
+        Responsive design and keyboard controls supported.\n
+        Link:\n
+        Public Repo: https://github.com/saurabhk79/snake-game\n\n\n
+        > Snippet Locker\n
+        Created using Laravel, built as a simple, private text-sharing app.\n
+        Pastebin-style snippets, but limited to plain text only.\n
+        Secure link sharing, no media or file support.\n
+        Link:\n
+        Public Repo: https://github.com/saurabhk79/snippet-locker\n\n\n
+        > Audio2boss Library\n
+        React.js library wrapper for the Web Speech API.\n
+        Easily integrate speech recognition into any React project.\n
+        Lightweight, developer-friendly, and customizable.\n
+        Link:\n
+        Public Repo: https://github.com/saurabhk79/audio2-boss
         `,
     },
     {
@@ -61,11 +85,11 @@ const UserContext = ({ children }) => {
       data: `
         \n On [${Date()}] 
         \n ---> showinfo contact --all
-        \n > Contact Me 📬\n
-        Want to connect? You can ping me, on these, and I will get back to you as soon as possible 😉
-        > LinkedIn 👔\n
+        \n > Contact Me\n
+        Want to connect? You can ping me, on these, and I will get back to you as soon as possible\n
+        > LinkedIn\n
         https://linkedin.com/in/saurabhk79\n\n
-        > Prefer Emails? 📩\n
+        > Prefer Emails?\n
         Or just drop a mail at: imsauby@gmail.com\n`,
     },
   ];
@@ -74,6 +98,7 @@ const UserContext = ({ children }) => {
     showSecond: false,
     showThird: false,
     showConsole: false,
+    skipAnimation: false,
   });
 
   const updateToggle = (toggleName, status) => {
