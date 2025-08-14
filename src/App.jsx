@@ -1,40 +1,41 @@
-import React, { useContext } from "react";
-import { TypeAnimation } from "react-type-animation";
-import { Context } from "./context";
-import Details from "./components/Details";
-import './App.css';
 
-const App = () => {
-  const { toggles, updateToggle } = useContext(Context);
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { TerminalHeader } from "./components/terminal-header"
+import { MenuButtons } from "./components/menu-buttons"
+import { ContentModal } from "./components/content-modal"
+import { AnimatedBackground } from "./components/animated-background"
+import './App.css'
+
+function App() {
+  const [activeSection, setActiveSection] = useState(null)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   return (
-    <div className="app-container">
-      <h1>
-        <TypeAnimation
-          sequence={["> Hey, I'm Saurabh K!", () => updateToggle('showSecond', true), 1000]}
-          speed={50}
-          cursor={false}
-        />
-      </h1>
-      {toggles.showSecond ? (
-        <h4>
-          <TypeAnimation
-            sequence={[
-              () => updateToggle('showThird', true),
-              "Full Stack Dev | Open Source",
-              1000,
-              "Full Stack Dev | Javascript/Typescript",
-              1000,
-              "Full Stack Dev | Python Developer",
-              1000,
-            ]}
-            speed={50}
-            repeat={Infinity}
-          />
-        </h4>
-      ) : null}
-      {toggles.showThird ? <Details />: null}
+    <div className="min-h-screen bg-black text-green-400 font-mono overflow-hidden relative">
+      <AnimatedBackground />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 min-h-screen w-screen flex flex-col items-center justify-center p-4"
+      >
+        <div className="w-full max-w-4xl mx-auto text-center space-y-12">
+          <TerminalHeader />
+          <MenuButtons activeSection={activeSection} setActiveSection={setActiveSection} />
+        </div>
+      </motion.div>
+
+      <AnimatePresence>
+        {activeSection && <ContentModal section={activeSection} onClose={() => setActiveSection(null)} />}
+      </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
 export default App;
