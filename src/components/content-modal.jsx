@@ -8,7 +8,7 @@ const content = {
     title: "About Me",
     text: `Hello! I'm Saurabh K, a passionate full-stack developer with a love for creating innovative solutions.
 
-I specialize in Python development, web technologies, and creative coding projects. My journey in tech has been driven by curiosity and a desire to build meaningful applications that solve real-world problems.
+I specialize in software development, web technologies, and creative coding projects. My journey in tech has been driven by curiosity and a desire to build meaningful applications that solve real-world problems.
 
 When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or experimenting with creative coding techniques.
 
@@ -18,35 +18,34 @@ Skills: Python, JavaScript, React, Node.js, Django, FastAPI, PostgreSQL, MongoDB
     title: "Projects",
     text: `Here are some of my notable projects:
 
-🚀 E-Commerce Platform
-   Full-stack web application built with React, Node.js, and PostgreSQL
-   Features: User authentication, payment integration, admin dashboard
+📊 Analytics Dashboard
+Web-based dashboard for visualizing and monitoring data in real-time
+Stack: React, Chart.js, Node.js, MongoDB
 
-🤖 AI Chat Assistant  
-   Python-based chatbot using natural language processing
-   Technologies: Python, TensorFlow, Flask, WebSocket
+💬 Group Chat Application(ChatO)
+Real-time chat app for group conversations
+Stack: Node.js, Express, Socket.io, HTML, CSS
 
-📊 Data Visualization Dashboard
-   Interactive dashboard for business analytics
-   Stack: React, D3.js, Python, FastAPI, Redis
+🔐 LockWala — Password Manager
+Secure and encrypted password storage with master key protection
+Stack: Next.js, TailwindCSS, supabase
 
-🎮 Game Development Framework
-   Custom game engine built from scratch
-   Languages: Python, OpenGL, Custom scripting language
+⌨️ Typing Speed Test
+Interactive typing game to test speed and accuracy
+Stack: Nextjs, TailwindCSS, postgres
 
-🔧 DevOps Automation Tools
-   CI/CD pipeline automation and monitoring tools
-   Tools: Docker, Kubernetes, Jenkins, Prometheus`,
+🔗 LinkWink — URL Shortener
+Shorten and manage links with click analytics
+Stack: Nextjs, MongoDB`,
   },
   contact: {
     title: "Contact Info",
     text: `Let's connect and build something amazing together!
 
-📧 Email: saurabh.dev@example.com
-🐙 GitHub: github.com/saurabhk
-💼 LinkedIn: linkedin.com/in/saurabhk
-🐦 Twitter: @saurabh_codes
-🌐 Website: saurabhk.dev
+📧 Email: imsaurabhk2002@gmail.com
+🐙 GitHub: github.com/saurabhk79
+💼 LinkedIn: linkedin.com/in/saurabhk79
+🌐 Website: saurabhk79.github.io
 
 I'm always open to discussing new opportunities, collaborating on interesting projects, or just having a chat about technology and development.
 
@@ -67,11 +66,11 @@ export function ContentModal({ section, onClose }) {
     setIsTyping(true)
     setShowSkip(true)
 
-    const text = sectionContent.text
+    const text = sectionContent?.text
     let index = 0
 
     typeIntervalRef.current = setInterval(() => {
-      if (index < text.length) {
+      if (index < text?.length) {
         setDisplayText(text.slice(0, index + 1))
         index++
       } else {
@@ -90,7 +89,7 @@ export function ContentModal({ section, onClose }) {
         typeIntervalRef.current = null
       }
     }
-  }, [section, sectionContent.text])
+  }, [section, sectionContent?.text])
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -108,7 +107,7 @@ export function ContentModal({ section, onClose }) {
       clearInterval(typeIntervalRef.current)
       typeIntervalRef.current = null
     }
-    setDisplayText(sectionContent.text)
+    setDisplayText(sectionContent?.text)
     setIsTyping(false)
     setShowSkip(false)
   }
@@ -151,7 +150,7 @@ export function ContentModal({ section, onClose }) {
         {/* Content */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-blue-400 mb-4">
-            $ cat {sectionContent.title.toLowerCase().replace(" ", "_")}.txt
+            $ cat {sectionContent?.title.toLowerCase().replace(" ", "_")}.txt
           </h2>
 
           <div className="bg-gray-900/50 rounded p-4 min-h-[300px] max-h-[400px] overflow-y-auto">
