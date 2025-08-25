@@ -6,11 +6,11 @@ import { X } from "lucide-react"
 const content = {
   about: {
     title: "About Me",
-    text: `Hello! I'm Saurabh K, a passionate full-stack developer with a love for creating innovative solutions.
+    text: `Hey, I’m Saurabh Kumar — a full-stack developer who enjoys building things that are both useful and efficient. Over the past year, I’ve worked on frontend and backend projects using React, Vue, Node.js, and Fastify, while also getting hands-on with PostgreSQL and MongoDB for data-heavy applications.
 
-I specialize in software development, web technologies, and creative coding projects. My journey in tech has been driven by curiosity and a desire to build meaningful applications that solve real-world problems.
+I’ve had the chance to work at Pando.ai, a product-based company, where I built scalable Vue.js components and optimized backend APIs to cut down response times. Before that, I developed MERN applications at Tech Corona, strengthening my foundations in full-stack work and deployments with Docker and Jenkins.
 
-When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or experimenting with creative coding techniques.
+My focus is on writing clean, maintainable code and creating applications that run fast and feel smooth. Beyond web apps, I’m curious about AI integrations and system optimization — areas I’ve started experimenting with in my side projects.
 
 Skills: Python, JavaScript, React, Node.js, Django, FastAPI, PostgreSQL, MongoDB, Docker, AWS, and more.`,
   },
@@ -47,7 +47,7 @@ Stack: Nextjs, MongoDB`,
 💼 LinkedIn: linkedin.com/in/saurabhk79
 🌐 Website: saurabhk79.github.io
 
-I'm always open to discussing new opportunities, collaborating on interesting projects, or just having a chat about technology and development.
+I'm always open to discussing new opportunities, collaborating on interesting projects.
 
 Feel free to reach out if you'd like to work together or if you have any questions about my projects!`,
   },

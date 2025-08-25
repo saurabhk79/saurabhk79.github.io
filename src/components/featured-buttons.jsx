@@ -4,9 +4,10 @@ import { motion } from "framer-motion"
 import { ExternalLink } from "lucide-react"
 
 const menuItems = [
-  { id: "linkwink", label: "Linkwink", url: "#" },
+  { id: "linkwink", label: "Linkwink", url: "https://linkwink-ten.vercel.app/" },
   { id: "lockwala", label: "LockWala", url: "#" },
-  { id: "typing-speed-test", label: "Typing Speed Test", url: "#" },
+  { id: "typing-speed-test", label: "Typing Rush", url: "https://type-rush-virid.vercel.app/" },
+  { id: "task-management", label: "Task Management", url: "https://task-management-24-seven.vercel.app/" },
 ]
 
 export function FeaturedButtons() {

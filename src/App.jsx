@@ -33,9 +33,14 @@ function App() {
             setActiveSection={setActiveSection}
           />
 
-          <h2 className="mt-32 text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 drop-shadow-2xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="mt-32 text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 drop-shadow-2xl"
+          >
             Featured Projects
-          </h2>
+          </motion.h2>
 
           <FeaturedButtons />
         </div>

@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 const roles = [
   "Full Stack Dev",
-  "Python Developer",
-  "Creative Coder",
+  "JS/TS Development",
+  "Python Development",
+  "Creativity in Coding",
   "Problem Solver",
 ];
 
